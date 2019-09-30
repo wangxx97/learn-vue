@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document=</title>
+    <script src="../learn-myself/js/vue.js"></script>
+</head>
+<body>
+
+<!--双向绑定 v-model-->
+<div id="app1">
+    <h3>单行文本框</h3>
+    <input type="text" v-model="singLeText" style="width: 240px;">
+    <p>{{ singLeText }}</p>
+    <h3>多行文本框</h3>
+    <textarea v-model="multiText" style="width: 240px"></textarea>
+    <pre>{{ multiText }}</pre>
+    <h3>单选框</h3>
+    <!-- 由于点击被选中的单选无法取消其被选中状态，所以实战中一般有使用单个单选项的场景。
+        这里，设置v-model共用同一个变量（radioValue）可实现RadioGroup的效果-->
+    <input type="radio" id="ra" value="杨玉环" v-model="radioValue">
+    <lable for="ra">A.杨玉环</lable>
+    <input type="radio" id="rb" value="赵飞燕" v-model="radioValue">
+    <lable for="ra">B.赵飞燕</lable>
+    <p>{{ radioValue }}</p>
+    <h3>单个复选框</h3>
+    <!-- 单个复选框被用于true和false的切换 -->
+    <input type="checkbox" id="c" v-model="toggleValue">
+    <lable for="c">天生丽质</lable>
+    <p>{{ toggleValue }}</p>
+    <h3>多个复选框</h3>
+    <!-- 多个复选框 ，v-model接收数组类型变量-->
+    <input type="checkbox" id="ca" value="漂亮" v-model="checkedValues">
+    <label for="ca">A. 回眸一笑百媚生</label>
+    <input type="checkbox" id="cb" value="瘦弱" v-model="checkedValues">
+    <label for="cb">B. 体轻能为掌上舞</label>
+    <input type="checkbox" id="cc" value="得宠" v-model="checkedValues">
+    <label for="cc">C. 三千宠爱在一身</label>
+    <p>{{ checkedValues.join(',') }}</p>
+</div>
+
+<script>
+    let vm = new Vue({
+        el: '#app1',
+        data() {
+            return {
+                singleText: '',
+                multiText: '',
+                radioValue: '',
+                toggleValue: false,
+                checkedValues: []
+            }
+        }
+    })
+</script>
+
+
+</body>
+</html>
