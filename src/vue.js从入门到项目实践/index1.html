@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document=</title>
+    <title>Document</title>
     <script src="../learn-myself/js/vue.js"></script>
 </head>
 <body>
@@ -40,6 +40,23 @@
     <input type="checkbox" id="cc" value="得宠" v-model="checkedValues">
     <label for="cc">C. 三千宠爱在一身</label>
     <p>{{ checkedValues.join(',') }}</p>
+    <h3>单项下拉菜单</h3>
+    <select v-model="singleSelect">
+        <!-- 如果没有设置value，则option节点的文本值会被当作value值-->
+        <option value="汉代">汉代</option>
+        <option>唐代</option>
+        <option>隋朝</option>
+    </select>
+    <p>{{ singleSelect }}</p>
+    <h3>多项下拉选择框</h3>
+    <select multiple v-model="multiSelect">
+        <!--  按住ctrl健，可执行多选-->
+        <option value=1>出身寒微</option>
+        <option value=2>饱受争议</option>
+        <option :value="3">结局悲凉</option>
+    </select>
+    <p>{{ multiSelect.join(',') }}</p>
+
 </div>
 
 <script>
@@ -51,7 +68,9 @@
                 multiText: '',
                 radioValue: '',
                 toggleValue: false,
-                checkedValues: []
+                checkedValues: [],
+                singleSelect: '唐代',
+                multiSelect:[1,3]
             }
         }
     })
