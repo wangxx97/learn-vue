@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8227cd46-0f5d-4724-8d20-c8b1028d0c05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/vue.js从入门到项目实践/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue.js从入门到项目实践/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue.js从入门到项目实践/img/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue.js从入门到项目实践/img/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +30,13 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/vue.js从入门到项目实践/img" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wxx\WebstormProjects\20190929learn_vue\src\vue.js从入门到项目实践\img" />
       <recent name="C:\Users\wxx\WebstormProjects\20190929learn_vue\src" />
       <recent name="C:\Users\wxx\WebstormProjects\20190929learn_vue" />
     </key>
@@ -67,7 +72,7 @@
       <updated>1569770590809</updated>
       <workItem from="1569770599044" duration="1838000" />
       <workItem from="1569803668916" duration="18948000" />
-      <workItem from="1569853716839" duration="3104000" />
+      <workItem from="1569853716839" duration="3806000" />
     </task>
     <servers />
   </component>

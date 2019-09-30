@@ -48,3 +48,7 @@ Uncaught TypeError: Cannot read property of undefined
 数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：
 > `<span>Message: {{ msg }}</span>`
 
+------
+###### 效果图
+![avatar](/src/vue.js从入门到项目实践/img/1.png)
+![avatar](src/vue.js从入门到项目实践/img/2.png)
