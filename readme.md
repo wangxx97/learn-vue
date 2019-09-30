@@ -25,8 +25,10 @@
         </li>`
 4. v-on 指令添加一个事件监听器，通过它调用在 Vue 实例中定义的方法
 > `<button v-on:click="reverseMessage">反转消息</button>`
-5.v-model 指令，表单输入和应用状态之间的双向绑定。
+5. v-model 指令，表单输入和应用状态之间的双向绑定。
 > `<input v-model="message">`
+6.  v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。
+> `<span v-once>这个将不会改变: {{ msg }}</span>`
 
 ------
 
@@ -41,4 +43,8 @@
 词法作用域查找，直至找到为止，经常导致 
 Uncaught TypeError: Cannot read property of undefined 
 或 Uncaught TypeError: this.myMethod is not a function 之类的错误。
+
+### 文本
+数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：
+> `<span>Message: {{ msg }}</span>`
 
