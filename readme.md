@@ -48,7 +48,16 @@ Uncaught TypeError: Cannot read property of undefined
 数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：
 > `<span>Message: {{ msg }}</span>`
 
+###### v-model与修饰符：
+>.lazy-将用户输入的数据赋值于变量的时机由输入时延迟到数据改变时
+>
+>.number-自动转换用户输入为数值类型 
+>
+>.trim-自动过滤用户输入的首位空字符
+
+
 ------
 ###### 效果图
 ![avatar](/src/vue.js从入门到项目实践/img/1.png)
 ![avatar](/src/vue.js从入门到项目实践/img/效果图.png)
+
