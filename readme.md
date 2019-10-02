@@ -10,7 +10,6 @@ var vm = new Vue ({
 </script>
 ```
 
----
 
 #### data的属性值
 
@@ -24,26 +23,35 @@ var vm = new Vue ({
 }
 ```
 
----
 
 #### Vue属性
 
 1. v-bind 特性被称为指令 用于绑定元素
- `<span v-bind:title="message"></span>`
+ ```
+ html<span v-bind:title="message"></span>
+```
 2. v-if 控制切换一个元素是否显示
- `<p v-if="seen">现在你看到我了</p>`
+ ```html
+ <p v-if="seen">现在你看到我了</p>
+```
 3. v-for 指令可以绑定数组的数据来渲染一个项目列表
- ```<li v-for="todo in todos">{{todo.text}}</li>```
+ ```html
+ <li v-for="todo in todos">{{todo.text}}</li>
+```
 4. v-on 指令添加一个事件监听器，通过它调用在 Vue 实例中定义的方法
- `<button v-on:click="reverseMessage">反转消息</button>`
+ ```html
+ <button v-on:click="reverseMessage">反转消息</button>
+```
 5. v-model 指令，表单输入和应用状态之间的双向绑定。
- `<input v-model="message">`
+ ```html
+ <input v-model="message">
+```
 6.  v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。
- `<span v-once>这个将不会改变: {{ msg }}</span>`
+ ```html
+ <span v-once>这个将不会改变: {{ msg }}</span>
+```
 
----
-
- Object.freeze()，这会阻止修改现有的属性，也意味着响应系统无法再追踪变化
+*  Object.freeze()，这会阻止修改现有的属性，也意味着响应系统无法再追踪变化
 `Object.freeze(obj)`
 
 #### 生命周期钩子:createdmounted、updated 和 destroyed
@@ -59,15 +67,17 @@ Uncaught TypeError: Cannot read property of undefined
 #### 文本
 
 数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：
-> `<span>Message: {{ msg }}</span>`
+```html
+<span>Message: {{ msg }}</span>
+```
 
 #### v-model与修饰符：
 
->.lazy-将用户输入的数据赋值于变量的时机由输入时延迟到数据改变时
->
->.number-自动转换用户输入为数值类型 
->
->.trim-自动过滤用户输入的首位空字符
+1. lazy-将用户输入的数据赋值于变量的时机由输入时延迟到数据改变时
+
+2. number-自动转换用户输入为数值类型 
+
+3. trim-自动过滤用户输入的首位空字符
 
 
 ---
