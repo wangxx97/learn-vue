@@ -14,8 +14,7 @@ var vm = new Vue ({
 
 #### data的属性值
 
- ```javascript
- <script type="text/javascript">
+ ``` javascript
  data: {
   newTodoText: '',
   visitCount: 0,
@@ -23,7 +22,6 @@ var vm = new Vue ({
   todos: [],
   error: null
 }
-</script>
 ```
 
 ---
