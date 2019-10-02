@@ -1,10 +1,10 @@
-####创建一个Vue实例
+#### 创建一个Vue实例
 `Var vm = new Vue({
     //选项
     el: '#id'
     data: { }
 })`
-#####data的属性值
+##### data的属性值
  `data: {
   newTodoText: '',
   visitCount: 0,
@@ -14,7 +14,7 @@
 }`
 
 ------
-####Vue属性
+#### Vue属性
 1. v-bind 特性被称为指令 用于绑定元素
 > `<span v-bind:title="message"></span>`
 2. v-if 控制切换一个元素是否显示
