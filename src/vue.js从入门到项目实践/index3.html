@@ -73,12 +73,12 @@
                     },
                     //domProps用于绑定节点DOM属性 ，如innerHTML，innerTEXT等
                     domProps: {
-                        innerText: '倒叙'
+                        innerText: '倒序'
                     },
                     on: {
                         //绑定事件，使箭头函数一面创建函数作用域
                         click: () => {
-                            thid.goods.reverse()
+                            this.goods.reverse()
                         }
                     },
                     //自定义指令
