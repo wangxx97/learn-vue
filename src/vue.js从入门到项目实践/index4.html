@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>组件服务</title>
+    <script src="js/vue.js"></script>
+    <style>
+        .tabs {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .per-tab {
+            display: inline-block;
+            width: 120px;
+            line-height: 32px;
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+
+        .per-tab:last-child {
+            border-right: 1px solid #ccc;
+        }
+
+        .tab-content {
+            height: 240px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <ul class="tabs">
+        <li class="per-tab" @click="toggleView('Home')">Home</li>
+        <!--  -->
+        <li class="per-tab" @click="toggleView('About')">About</li>
+    </ul>
+    <div class="tab-content">
+        <component :is="view"></component> <!--view为变量-->
+    </div>
+</div>
+
+<script type="text/javascript">
+    let Home = { //Home组件
+        template: '<p style="color: #787878;">Hello Home!</p>'
+    }
+    let About = { //About组件
+        template: '<p>Hello About!</p>'
+    }
+    let vm = new Vue({ //Vue实例
+        el: '#app',
+        components: {Home, About},
+        data () {
+            return{
+                view:'Home'
+            }
+        },
+        methods:{
+            toggleView (view){
+                this.view = view
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
