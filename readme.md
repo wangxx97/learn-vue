@@ -1,19 +1,30 @@
 #### 创建一个Vue实例
 
-`Var vm = new Vue({
+```javascript 
+<script type="text/javascript">
+var vm = new Vue ({
     //选项
     el: '#id'
     data: { }
-})`
-##### data的属性值
+})
+</script>
+```
 
- `data: {
+---
+
+#### data的属性值
+
+ ```javascript
+ <script type="text/javascript">
+ data: {
   newTodoText: '',
   visitCount: 0,
   hideCompletedTodos: false,
   todos: [],
   error: null
-}`
+}
+</script>
+```
 
 ---
 
@@ -37,7 +48,7 @@
  Object.freeze()，这会阻止修改现有的属性，也意味着响应系统无法再追踪变化
 `Object.freeze(obj)`
 
-### 生命周期钩子:createdmounted、updated 和 destroyed
+#### 生命周期钩子:createdmounted、updated 和 destroyed
 
 >不要在选项属性或回调上使用箭头函数，
 比如 created: () => console.log(this.a) 
@@ -52,7 +63,7 @@ Uncaught TypeError: Cannot read property of undefined
 数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：
 > `<span>Message: {{ msg }}</span>`
 
-###### v-model与修饰符：
+#### v-model与修饰符：
 
 >.lazy-将用户输入的数据赋值于变量的时机由输入时延迟到数据改变时
 >
@@ -62,7 +73,7 @@ Uncaught TypeError: Cannot read property of undefined
 
 
 ---
-###### 效果图
+#### 效果图
 
 ![avatar](/src/vue.js从入门到项目实践/img/1.png)
 ![avatar](/src/vue.js从入门到项目实践/img/效果图.png)
