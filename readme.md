@@ -1,10 +1,12 @@
 #### 创建一个Vue实例
+
 `Var vm = new Vue({
     //选项
     el: '#id'
     data: { }
 })`
 ##### data的属性值
+
  `data: {
   newTodoText: '',
   visitCount: 0,
@@ -13,8 +15,10 @@
   error: null
 }`
 
-------
+---
+
 #### Vue属性
+
 1. v-bind 特性被称为指令 用于绑定元素
  `<span v-bind:title="message"></span>`
 2. v-if 控制切换一个元素是否显示
@@ -28,12 +32,13 @@
 6.  v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。
  `<span v-once>这个将不会改变: {{ msg }}</span>`
 
-------
+---
 
  Object.freeze()，这会阻止修改现有的属性，也意味着响应系统无法再追踪变化
 `Object.freeze(obj)`
 
 ### 生命周期钩子:createdmounted、updated 和 destroyed
+
 >不要在选项属性或回调上使用箭头函数，
 比如 created: () => console.log(this.a) 
 或 vm.$watch('a', newValue => this.myMethod())。
@@ -42,11 +47,13 @@
 Uncaught TypeError: Cannot read property of undefined 
 或 Uncaught TypeError: this.myMethod is not a function 之类的错误。
 
-### 文本
+#### 文本
+
 数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：
 > `<span>Message: {{ msg }}</span>`
 
 ###### v-model与修饰符：
+
 >.lazy-将用户输入的数据赋值于变量的时机由输入时延迟到数据改变时
 >
 >.number-自动转换用户输入为数值类型 
@@ -54,8 +61,11 @@ Uncaught TypeError: Cannot read property of undefined
 >.trim-自动过滤用户输入的首位空字符
 
 
-------
+---
 ###### 效果图
+
 ![avatar](/src/vue.js从入门到项目实践/img/1.png)
 ![avatar](/src/vue.js从入门到项目实践/img/效果图.png)
+![avatar](/src/vue.js从入门到项目实践/img/4.png)
+
 
