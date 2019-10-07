@@ -89,9 +89,13 @@ Uncaught TypeError: Cannot read property of undefined
 #### 效果图
 
 ![avatar](/src/vue.js从入门到项目实践/img/1.png)
+
 ![avatar](/src/vue.js从入门到项目实践/img/2.png)
+
 ![avatar](/src/vue.js从入门到项目实践/img/3.png)
+
 ![avatar](/src/vue.js从入门到项目实践/img/4.png)
+
 ![avatar](/src/vue.js从入门到项目实践/img/5.png)
 
 
