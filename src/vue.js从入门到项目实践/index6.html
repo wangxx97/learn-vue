@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过渡</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>-->
+    <script src="js/vue.js"></script>
+    <style>
+        .inline-block {
+            display: inline-block;
+        }
+
+        .rotate-enter-active {
+            animation: selfRotateIn 1s;
+        }
+
+        .rotate-leave-active {
+            animation: selfRotateOut 1s;
+        }
+
+        /*命名避免与Animate.css重复*/
+        @keyframes selfRotateIn {
+            0% {
+                opacity: 0;
+                transform: rotateZ(-180deg);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateZ(0deg);
+            }
+        }
+
+        @keyframes selfRotateOut {
+            0% {
+                opacity: 1;
+                transform: rotateZ(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: rotateZ(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <button @click="isHidden = !isHidden">
+        {{ isHidden ? '显示' : '隐藏' }}
+    </button>
+
+    <!--自定义动画-->
+    <transition name="rotate">
+        <span class="inline-block" v-if="!isHidden">自定义动画</span>
+    </transition>
+
+    <!--animate.css的动画-->
+    <transition name="custom" enter-active-class="animated rotateIn" leave-active-class="animated rotateOut">
+        <span class="inline-block" v-if="!isHidden">animate.css的动画</span>
+    </transition>
+</div>
+
+<script type="text/javascript">
+    //声明Vue实例
+    let vm = new Vue({
+        el: '#app',
+        data (){
+            return{
+                isHidden: true
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
