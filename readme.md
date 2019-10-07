@@ -93,7 +93,6 @@ Uncaught TypeError: Cannot read property of undefined
 ![avatar](/src/vue.js从入门到项目实践/img/3.png)
 ![avatar](/src/vue.js从入门到项目实践/img/4.png)
 ![avatar](/src/vue.js从入门到项目实践/img/5.png)
-![avatar](/src/vue.js从入门到项目实践/img/6.png)
 
 
 
